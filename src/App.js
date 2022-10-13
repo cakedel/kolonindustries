@@ -15,17 +15,20 @@ const App = () => {
   const SERVICE_KEY = process.env.REACT_APP_SERVICE_KEY;
 
   useEffect(() => {
-    const url = `https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/getStockPriceInfo?serviceKey=${SERVICE_KEY}&resultType=json&isinCd=KR7120110002&mrktCtg=KOSPI&numOfRows=1`;
+    const API_URL =
+      "https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService";
+    const url = `${API_URL}?serviceKey=${SERVICE_KEY}&resultType=json&isinCd=KR7120110002&mrktCtg=KOSPI&numOfRows=1`;
     const getStock = async () => {
       const response = await axios.get(url);
       getData(response.data);
+      console.log(response)
     };
     getStock();
   }, []);
 
   return (
     <div>
-      {data ? (
+      {/* {data ? ( */}
         <Routes>
           <Route element={<Layout />}>
             <Route path="/*" element={<MainContents />} />
@@ -36,9 +39,9 @@ const App = () => {
             <Route path="/subMenu/5/*" element={<Employment />} />
           </Route>
         </Routes>
-      ) : (
-        <div>Now Loading...</div>
-      )}
+      {/* ) : (
+        <div>Now Loading</div>
+      )} */}
     </div>
   );
 };

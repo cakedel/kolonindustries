@@ -1,5 +1,5 @@
-import React, { useEffect, useRef } from "react";
-import { Link, useNavigate } from "react-router-dom";
+import React, { useRef } from "react";
+import { useNavigate } from "react-router-dom";
 
 const Write = ({ list, setList, input, setInput, num }) => {
   const inputSort = useRef();
@@ -28,7 +28,6 @@ const Write = ({ list, setList, input, setInput, num }) => {
     } else {
       submitList();
     }
-    console.log(inputSort.current.value);
   };
 
   return (

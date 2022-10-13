@@ -22,7 +22,7 @@ const List = ({ list, num }) => {
             <td className="sort">구분</td>
             <td className="company">사명</td>
             <td className="title">제목</td>
-            <td className="date">모집기간</td>
+            <td className="date">날짜</td>
           </tr>
         </thead>
         <tbody>

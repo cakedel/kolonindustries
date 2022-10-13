@@ -1,10 +1,14 @@
 import React from "react";
 import { useNavigate, useParams } from "react-router-dom";
 
-const View = ({ list }) => {
+const View = ({ list, setList }) => {
   const LINK = useNavigate();
   const { id } = useParams();
   const view = list.find((el) => String(el.id) === id);
+  const delList = () => {
+    setList(list.filter((it) => String(it.id) !== id));
+    LINK("/subMenu/5");
+  };
   return (
     <div className="view">
       <table className="viewTable">
@@ -31,8 +35,15 @@ const View = ({ list }) => {
         </tbody>
       </table>
       <div className="buttonGruop">
-        <button className="writeBtn">수정하기</button>
-        <button className="writeBtn">삭제하기</button>
+        <button
+          className="writeBtn"
+          onClick={() => LINK("/subMenu/5/modify/" + view.id)}
+        >
+          수정하기
+        </button>
+        <button className="writeBtn" onClick={delList}>
+          삭제하기
+        </button>
       </div>
     </div>
   );

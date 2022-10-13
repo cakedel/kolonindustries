@@ -16,7 +16,10 @@ const Employment = () => {
       <div className="inner">
         <Routes>
           <Route path="/*" element={<List list={list} />}></Route>
-          <Route path="/view/:id" element={<View list={list} />}></Route>
+          <Route
+            path="/view/:id"
+            element={<View list={list} setList={setList} />}
+          ></Route>
           <Route
             path="/write"
             element={
