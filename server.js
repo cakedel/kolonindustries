@@ -10,6 +10,6 @@ app.listen(PORT, () => {
 });
 
 app.get("*", function (req, res) {
-  res.sendFile(path.join(__dirname, "./build/index.html"));
   res.header("Access-Control-Allow-origin", "*");
+  res.sendFile(path.join(__dirname, "./build/index.html"));
 });

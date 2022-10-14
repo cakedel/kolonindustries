@@ -46,5 +46,18 @@
   },
   "devDependencies": {
     "gh-pages": "^4.0.0"
-  }
+  },
+  "description": "---\r ### ver 1.0.0 release in 2022-10-14\r ### 주요 기능",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/cakedel/kolonindustries.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/cakedel/kolonindustries/issues"
+  },
+  "homepage": "https://github.com/cakedel/kolonindustries#readme"
 }
