@@ -1,11 +1,8 @@
 {
   "name": "kolonindustries",
   "version": "1.0.0",
-  "engines": {
-    "node": "18.3.0",
-    "npm": "8.15.0"
-  },
   "private": true,
+  "homepage": "http://cakedel.github.io/kolon",
   "dependencies": {
     "@testing-library/jest-dom": "^5.16.5",
     "@testing-library/react": "^13.4.0",
@@ -13,6 +10,7 @@
     "axios": "^1.1.2",
     "cors": "^2.8.5",
     "express": "^4.18.2",
+    "gh-pages": "^4.0.0",
     "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -22,11 +20,12 @@
     "web-vitals": "^2.1.4"
   },
   "scripts": {
-    "start": "node server.js",
-    "heroku-postbuild": "NPM_CONFIG_PRODUCTION=false npm install --prefix kolonindustries && npm run build --prefix kolonindustries",
-    "test": "nodemon ./server.js",
+    "start": "react-scripts start",
     "build": "react-scripts build",
-    "eject": "react-scripts eject"
+    "test": "react-scripts test",
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "eslintConfig": {
     "extends": [
@@ -45,21 +44,5 @@
       "last 1 firefox version",
       "last 1 safari version"
     ]
-  },
-  "devDependencies": {
-    "gh-pages": "^4.0.0"
-  },
-  "description": "---\r ### ver 1.0.0 release in 2022-10-14\r ### 주요 기능",
-  "main": "server.js",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/cakedel/kolonindustries.git"
-  },
-  "keywords": [],
-  "author": "",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/cakedel/kolonindustries/issues"
-  },
-  "homepage": "https://github.com/cakedel/kolonindustries#readme"
+  }
 }
