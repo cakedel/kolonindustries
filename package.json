@@ -1,6 +1,5 @@
 {
   "name": "kolonindustries",
-  "homepage": "http://cakedel.github.io/kolonindustries",
   "version": "0.1.0",
   "private": true,
   "dependencies": {
@@ -8,6 +7,8 @@
     "@testing-library/react": "^13.4.0",
     "@testing-library/user-event": "^13.5.0",
     "axios": "^1.1.2",
+    "cors": "^2.8.5",
+    "express": "^4.18.2",
     "http-proxy-middleware": "^2.0.6",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
@@ -18,8 +19,9 @@
   },
   "scripts": {
     "start": "node ./server.js",
+    "heroku-postbuild": "cd client && npm install && npm run build",
+    "test": "nodemon ./server.js",
     "build": "react-scripts build",
-    "test": "react-scripts test",
     "eject": "react-scripts eject",
     "predeploy": "npm run build",
     "deploy": "gh-pages -d build"
