@@ -4,10 +4,10 @@ const Stock = ({ stockData }) => {
   const kolonStock = stockData.response.body.items.item[0];
   const stockPrice = Number(kolonStock.clpr);
   const trquStockNum = Number(kolonStock.trqu);
-  const hiprStockNum = Number(kolonStock.hipr)
-  const loprStockNum = Number(kolonStock.lopr)
-  const mkpStockNum = Number(kolonStock.mkp)
-  const fltRtStockNum = Number(kolonStock.fltRt)
+  const hiprStockNum = Number(kolonStock.hipr);
+  const loprStockNum = Number(kolonStock.lopr);
+  const mkpStockNum = Number(kolonStock.mkp);
+  const fltRtStockNum = Number(kolonStock.fltRt);
 
   const date = kolonStock.basDt;
 
@@ -35,9 +35,7 @@ const Stock = ({ stockData }) => {
               <td className="bottomValue">{fltRtStockNum.toFixed(2)}</td>
               <td className="bottomValue">{mkpStockNum.toLocaleString()}</td>
               <td className="bottomValue">{hiprStockNum.toLocaleString()}</td>
-              <td className="bottomValue">
-                {loprStockNum.toLocaleString()}
-              </td>
+              <td className="bottomValue">{loprStockNum.toLocaleString()}</td>
               <td className="bottomValue">{trquStockNum.toLocaleString()}</td>
             </tr>
           </tbody>

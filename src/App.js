@@ -8,27 +8,27 @@ import Layout from "./components/Layout";
 import Employment from "./components/Employment";
 import Sustain from "./components/Sustain";
 import Company from "./components/Company";
-// import { axiosInstance } from "./config";
 
 const App = () => {
-  const [data, getData] = useState(null);
-  const SERVICE_KEY = process.env.REACT_APP_SERVICE_KEY;
+  const [data, getData] = useState([]);
+  const SERVICE_KEY = process.env.REACT_APP_API_KEY;
+  const endPoint =
+    "1160100/service/GetStockSecuritiesInfoService/";
+  const url =
+    `${endPoint}serviceKey=${SERVICE_KEY}&numOfRows=1&isinCd=KR7120110002`;
 
   useEffect(() => {
-    const API_URL =
-      "https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService";
-    const url = `${API_URL}?serviceKey=${SERVICE_KEY}&resultType=json&isinCd=KR7120110002&mrktCtg=KOSPI&numOfRows=1`;
     const getStock = async () => {
       const response = await axios.get(url);
       getData(response.data);
-      console.log(response.data);
+      console.log(data);
     };
     getStock();
   }, []);
 
   return (
     <div>
-      {/* {data ? ( */}
+      {data ? (
         <Routes>
           <Route element={<Layout />}>
             <Route path="/*" element={<MainContents />} />
@@ -39,9 +39,9 @@ const App = () => {
             <Route path="/subMenu/5/*" element={<Employment />} />
           </Route>
         </Routes>
-      {/* ) : (
+      ) : (
         <div>Now Loading</div>
-      )} */}
+      )}
     </div>
   );
 };
