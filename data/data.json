@@ -1,0 +1,31 @@
+{
+  "response": {
+    "header": { "resultCode": "00", "resultMsg": "NORMAL SERVICE." },
+    "body": {
+      "numOfRows": 1,
+      "pageNo": 1,
+      "totalCount": 687,
+      "items": {
+        "item": [
+          {
+            "basDt": "20221013",
+            "srtnCd": "120110",
+            "isinCd": "KR7120110002",
+            "itmsNm": "코오롱인더",
+            "mrktCtg": "KOSPI",
+            "clpr": "41850",
+            "vs": "-1550",
+            "fltRt": "-3.57",
+            "mkp": "43450",
+            "hipr": "43600",
+            "lopr": "41850",
+            "trqu": "84277",
+            "trPrc": "3580158600",
+            "lstgStCnt": "27519091",
+            "mrktTotAmt": "1151673958350"
+          }
+        ]
+      }
+    }
+  }
+}

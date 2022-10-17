@@ -13,9 +13,8 @@ const App = () => {
   const [data, getData] = useState([]);
   const SERVICE_KEY = process.env.REACT_APP_API_KEY;
   const endPoint =
-    "1160100/service/GetStockSecuritiesInfoService/";
-  const url =
-    `${endPoint}serviceKey=${SERVICE_KEY}&numOfRows=1&isinCd=KR7120110002`;
+    "https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/";
+  const url = "./data.json";
 
   useEffect(() => {
     const getStock = async () => {
