@@ -11,16 +11,14 @@ import Company from "./components/Company";
 
 const App = () => {
   const [data, getData] = useState([]);
-  const SERVICE_KEY = process.env.REACT_APP_API_KEY;
-  const endPoint =
-    "https://apis.data.go.kr/1160100/service/GetStockSecuritiesInfoService/";
-  const url = "./data.json";
+  const url =
+    "https://raw.githubusercontent.com/cakedel/kolondata/main/data.json";
 
   useEffect(() => {
     const getStock = async () => {
       const response = await axios.get(url);
       getData(response.data);
-      console.log(data);
+      console.log(response.data);
     };
     getStock();
   }, []);
