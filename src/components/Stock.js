@@ -1,27 +1,26 @@
 import React from "react";
 
-const Stock = ({ stockData }) => {
-  const kolonStock = stockData.response.body.items.item[0];
-  const stockPrice = Number(kolonStock.clpr);
-  const trquStockNum = Number(kolonStock.trqu);
-  const hiprStockNum = Number(kolonStock.hipr);
-  const loprStockNum = Number(kolonStock.lopr);
-  const mkpStockNum = Number(kolonStock.mkp);
-  const fltRtStockNum = Number(kolonStock.fltRt);
+const Stock = () => {
+  // const kolonStock = stockData.response.body.items.item[0];
+  // const stockPrice = Number(kolonStock.clpr);
+  // const trquStockNum = Number(kolonStock.trqu);
+  // const hiprStockNum = Number(kolonStock.hipr);
+  // const loprStockNum = Number(kolonStock.lopr);
+  // const mkpStockNum = Number(kolonStock.mkp);
+  // const fltRtStockNum = Number(kolonStock.fltRt);
 
-  const date = kolonStock.basDt;
+  // const date = kolonStock.basDt;
 
   return (
     <section className="Stock section">
-      {console.log(stockData)}
       <div className="inner">
         <h3>주가정보</h3>
-        <strong>{date} 기준</strong>
+        <strong>20221111기준</strong>
         <table className="stocktable">
           <tbody>
             <tr>
               <th className="stockNum" rowSpan={2}>
-                {stockPrice.toLocaleString()}
+                124424
               </th>
               <td className="topTitle bottomLine">전일대비</td>
               <td className="topTitle bottomLine">등락률</td>
@@ -31,12 +30,12 @@ const Stock = ({ stockData }) => {
               <td className="topTitle bottomLine">거래량</td>
             </tr>
             <tr>
-              <td className="bottomValue">{stockPrice.toLocaleString()}</td>
-              <td className="bottomValue">{fltRtStockNum.toFixed(2)}</td>
-              <td className="bottomValue">{mkpStockNum.toLocaleString()}</td>
-              <td className="bottomValue">{hiprStockNum.toLocaleString()}</td>
-              <td className="bottomValue">{loprStockNum.toLocaleString()}</td>
-              <td className="bottomValue">{trquStockNum.toLocaleString()}</td>
+              <td className="bottomValue">1</td>
+              <td className="bottomValue">2</td>
+              <td className="bottomValue">3</td>
+              <td className="bottomValue">4</td>
+              <td className="bottomValue">4</td>
+              <td className="bottomValue">5</td>
             </tr>
           </tbody>
         </table>
