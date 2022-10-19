@@ -95,9 +95,11 @@ const Write = ({ list, setList, input, setInput, num }) => {
           </tr>
         </tbody>
       </table>
-      <button className="writeBtn" onClick={writeBoard}>
-        글쓰기
-      </button>
+      <div className="buttonGroup">
+        <button className="writeBtn" onClick={writeBoard}>
+          글쓰기
+        </button>
+      </div>
     </div>
   );
 };

@@ -6,13 +6,9 @@ import Layout from "./components/Layout";
 import Employment from "./components/Employment";
 import Sustain from "./components/Sustain";
 import Company from "./components/Company";
+import axios from "axios"
 
 const App = () => {
-  // axios.get("http://localhost:4000/").then((res) => {
-  //   console.log(res);
-  // });
-
-  //로컬 서버에서 데이터를 가져오는 코드라고 합니다. 현재 먹통이라 주석처리 해뒀습니다.
 
   return (
     <div>

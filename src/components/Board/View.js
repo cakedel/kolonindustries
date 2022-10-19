@@ -34,15 +34,15 @@ const View = ({ list, setList }) => {
           </tr>
         </tbody>
       </table>
-      <div className="buttonGruop">
+      <div className="buttonGroup">
         <button
           className="writeBtn"
           onClick={() => LINK("/subMenu/5/modify/" + view.id)}
         >
-          수정하기
+          수정
         </button>
         <button className="writeBtn" onClick={delList}>
-          삭제하기
+          삭제
         </button>
       </div>
     </div>

@@ -45,10 +45,11 @@ const List = ({ list, num }) => {
             .reverse()}
         </tbody>
       </table>
-
-      <button className="writeBtn" onClick={writeBoard}>
-        글쓰기
-      </button>
+      <div className="buttonGroup">
+        <button className="writeBtn" onClick={writeBoard}>
+          글쓰기
+        </button>
+      </div>
     </div>
   );
 };

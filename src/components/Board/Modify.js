@@ -39,7 +39,7 @@ const Modify = ({ list, setList, num }) => {
           : el
       );
       setList(post);
-      LINK("../");
+      LINK("/subMenu/5");
     }
   };
 
@@ -108,9 +108,11 @@ const Modify = ({ list, setList, num }) => {
           </tr>
         </tbody>
       </table>
-      <button className="writeBtn" onClick={modifyBoard}>
-        수정하기
-      </button>
+      <div className="buttonGroup">
+        <button className="writeBtn" onClick={modifyBoard}>
+          수정하기
+        </button>
+      </div>
     </div>
   );
 };
