@@ -5,10 +5,12 @@ const View = ({ list, setList }) => {
   const LINK = useNavigate();
   const { id } = useParams();
   const view = list.find((el) => String(el.id) === id);
+  // 게시판에서 클릭했던 객체를 배열에서 찾아서 보여주기 위한 변수
   const delList = () => {
     setList(list.filter((it) => String(it.id) !== id));
     LINK("/subMenu/5");
   };
+  // list state를 삭제하려는 객체와 일치하는 값을 제외하고 배열을 넣어준다.
   return (
     <div className="view">
       <table className="viewTable">

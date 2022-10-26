@@ -29,6 +29,7 @@ const Write = ({ list, setList, input, setInput, num }) => {
       submitList();
     }
   };
+  // 경력 유무를 입력하지 않으면 submitList가 실행되지 않도록 하는 검증.
 
   return (
     <div className="Write">

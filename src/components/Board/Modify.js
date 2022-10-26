@@ -4,6 +4,7 @@ import { useNavigate, useParams } from "react-router-dom";
 const Modify = ({ list, setList, num }) => {
   const { id } = useParams();
   const view = list.find((el) => String(el.id) === id);
+  // params의 값과 일치하는 객체를 list 배열에서 찾아서 호출
   const inputSort = useRef();
   const LINK = useNavigate();
   const [modify, setModify] = useState({
@@ -14,6 +15,7 @@ const Modify = ({ list, setList, num }) => {
     content: view.content,
     date: view.date,
   });
+  // modify의 초기 값을 위에서 찾았던 객체의 key, value값과 일치시킨다.
   const modifyInput = (e) => {
     setModify({
       ...modify,
@@ -41,6 +43,7 @@ const Modify = ({ list, setList, num }) => {
       setList(post);
       LINK("/subMenu/5");
     }
+     // 경력 유무를 입력하지 않으면 submitList가 실행되지 않도록 하는 검증.
   };
 
   return (
